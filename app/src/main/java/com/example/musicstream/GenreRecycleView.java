@@ -35,15 +35,15 @@ public class GenreRecycleView extends RecyclerView.Adapter<GenreRecycleView.MyVi
 
     @Override
     public void onBindViewHolder(@NonNull GenreRecycleView.MyViewHolder genreholder, int position) {
-        genreholder.genreimage.setImageResource(genreList.get(position).getDrawable());
         genreholder.genretitle.setText(String.valueOf(genreList.get(position).getGenretitle()));
+        genreholder.genreimage.setImageResource(genreList.get(position).getDrawable());
         genreholder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "Genre: " + genreList.get(position).getGenretitle(),Toast.LENGTH_SHORT).show();
-                Intent artistsongpage = new Intent(context, ArtistSongActivity.class);
-                artistsongpage.putExtra("index", position);
-                context.startActivity(artistsongpage);
+                Intent genresongpage = new Intent(context, GenreSongActivity.class);
+                genresongpage.putExtra("index", position);
+                context.startActivity(genresongpage);
             }
         });
     }

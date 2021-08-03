@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter gAdapter;
     private RecyclerView.LayoutManager glayoutManager;
     GenreCollection genreCollection = new GenreCollection();
-    List<Genre> genreList = genreCollection.getGenreList();
+    List<Genre> genreList = genreCollection.getGenre();
     //genrecolumn recycleview variable
 
 

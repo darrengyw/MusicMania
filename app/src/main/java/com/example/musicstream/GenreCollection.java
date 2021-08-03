@@ -30,8 +30,8 @@ public class GenreCollection {
 
         genre.addAll(Arrays.asList(genres));
     }
-    public List<Genre> getGenreList() {
+    public List<Genre> getGenre()
+    {
         return genre;
-
     }
 }

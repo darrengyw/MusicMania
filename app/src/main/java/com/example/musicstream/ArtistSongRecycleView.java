@@ -37,6 +37,16 @@ public class ArtistSongRecycleView extends RecyclerView.Adapter<ArtistSongRecycl
         artistsongholder.artistimage.setImageResource((artistSongList.get(position).getDrawable()));
         artistsongholder.songtitle.setText(String.valueOf(artistSongList.get(position).getArtistsongtitle()));
         artistsongholder.artisttitle.setText(String.valueOf(artistSongList.get(position).getArtistname()));
+        /*artistsongholder.parentLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, artistSongList.get(position).getArtistsongtitle(), Toast.LENGTH_SHORT).show();
+                Intent songpage = new Intent(context, PlaySongActivity.class);
+                songpage.putExtra("index", position);
+                context.startActivity(songpage);
+            }
+        });*/
+
 
     }
 
@@ -54,9 +64,9 @@ public class ArtistSongRecycleView extends RecyclerView.Adapter<ArtistSongRecycl
         {
             super(itemView);
             artistimage = itemView.findViewById(R.id.artistimage);
-            songtitle = itemView.findViewById(R.id.songtitle);
+            songtitle = itemView.findViewById(R.id.artistsongtitle);
             artisttitle = itemView.findViewById(R.id.artisttitle);
-            parentLayout = itemView.findViewById(R.id.constraintsonglayout);
+            parentLayout = itemView.findViewById(R.id.genresongconstraint);
         }
     }
 }

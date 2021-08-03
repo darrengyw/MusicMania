@@ -5,7 +5,7 @@ public class Artist {
     private String title;
     private int drawable;
 
-    public Artist (String id, String title,int drawable)
+    public Artist (String id, String title, int drawable)
     {
         this.id = id;
         this.title = title;
@@ -32,7 +32,6 @@ public class Artist {
     {
         return title;
     }
-
     public int getDrawable()
     {
         return drawable;
