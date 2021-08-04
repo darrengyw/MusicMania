@@ -37,15 +37,12 @@ public class GenreSongRecycleView extends RecyclerView.Adapter<GenreSongRecycleV
         genresongholder.genreimage.setImageResource(genreSongList.get(position).getDrawable());
         genresongholder.genresongtitle.setText(String.valueOf(genreSongList.get(position).getGenresongtitle()));
         genresongholder.genretitle.setText(String.valueOf(genreSongList.get(position).getGenrename()));
-        /*genresongholder.parentLayout.setOnClickListener(new View.OnClickListener() {
+        genresongholder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, artistSongList.get(position).getArtistsongtitle(), Toast.LENGTH_SHORT).show();
-                Intent songpage = new Intent(context, PlaySongActivity.class);
-                songpage.putExtra("index", position);
-                context.startActivity(songpage);
+                Toast.makeText(context, genreSongList.get(position).getGenresongtitle(), Toast.LENGTH_SHORT).show();
             }
-        });*/
+        });
     }
 
     @Override

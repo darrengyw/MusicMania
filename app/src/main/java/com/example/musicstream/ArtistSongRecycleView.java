@@ -37,15 +37,15 @@ public class ArtistSongRecycleView extends RecyclerView.Adapter<ArtistSongRecycl
         artistsongholder.artistimage.setImageResource((artistSongList.get(position).getDrawable()));
         artistsongholder.songtitle.setText(String.valueOf(artistSongList.get(position).getArtistsongtitle()));
         artistsongholder.artisttitle.setText(String.valueOf(artistSongList.get(position).getArtistname()));
-        /*artistsongholder.parentLayout.setOnClickListener(new View.OnClickListener() {
+        artistsongholder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, artistSongList.get(position).getArtistsongtitle(), Toast.LENGTH_SHORT).show();
-                Intent songpage = new Intent(context, PlaySongActivity.class);
-                songpage.putExtra("index", position);
-                context.startActivity(songpage);
+                Intent artistpage = new Intent(context, PlaySongActivity.class);
+                artistpage.putExtra("index", position);
+                context.startActivity(artistpage);
             }
-        });*/
+        });
 
 
     }
