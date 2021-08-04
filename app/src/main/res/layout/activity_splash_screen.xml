@@ -21,7 +21,7 @@
         android:id="@+id/txtappname"
         android:layout_width="138dp"
         android:layout_height="41dp"
-        android:text="Created: 2104495C_Darren"
+        android:text="Created by: 2104495C_Darren"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

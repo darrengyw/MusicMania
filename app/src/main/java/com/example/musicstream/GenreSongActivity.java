@@ -44,7 +44,7 @@ public class GenreSongActivity extends AppCompatActivity {
     }
     public void displaygenreview()
     {
-        //GenreCover.setImageResource(genreCollection.getGenre().get(displaygenre).getDrawable());
+        GenreCover.setImageResource(genreCollection.getGenre().get(displaygenre).getDrawable());
         GenreName.setText((genreCollection.getGenre().get(displaygenre).getGenretitle()));
     }
 
