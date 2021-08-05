@@ -39,7 +39,7 @@ public class ArtistRecycleView extends RecyclerView.Adapter<ArtistRecycleView.My
         artistholder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Artist: " + artistList.get(position).getTitle(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Artist: " + artistList.get(position).getTitle(),Toast.LENGTH_SHORT).show();
                 Intent artistsongpage = new Intent(context, ArtistSongActivity.class);
                 artistsongpage.putExtra("index", position);
                 context.startActivity(artistsongpage);

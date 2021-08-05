@@ -22,6 +22,7 @@ public class ArtistSongActivity extends AppCompatActivity {
     TextView ArtistName;
     int displayartist;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +31,7 @@ public class ArtistSongActivity extends AppCompatActivity {
         displayartist = artistsong.getInt("index");
         artistSongList = artistSongCollection.artistsong.get(displayartist);
         ArtistCover = findViewById(R.id.artistview);
-        ArtistName =findViewById(R.id.artistname);
-
+        ArtistName = findViewById(R.id.artistname);
         asrecycleview = findViewById(R.id.artistsongrecycleview);
         asrecycleview.setHasFixedSize(true);
         aslayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);

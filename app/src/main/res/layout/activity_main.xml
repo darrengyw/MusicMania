@@ -11,23 +11,35 @@
         android:id="@+id/txtlogoname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
         android:layout_marginTop="4dp"
         android:text="Musicmania"
         android:textAlignment="center"
         android:textColor="#F9F9F9"
         android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/btnSearch"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/search" />
+
     <ScrollView
         android:id="@+id/homeview"
-        android:layout_width="413dp"
-        android:layout_height="729dp"
+        android:layout_width="410dp"
+        android:layout_height="675dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtlogoname">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -37,8 +49,8 @@
                 android:id="@+id/txtsongcolumn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
                 android:lineSpacingExtra="28sp"
                 android:text="Your Personal Songtrack"
                 android:textAlignment="center"
@@ -51,56 +63,58 @@
                 android:id="@+id/recyclerView1"
                 android:layout_width="386dp"
                 android:layout_height="195dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/txtsongcolumn" />
 
             <TextView
                 android:id="@+id/txtartistcolumn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="295dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
                 android:lineSpacingExtra="28sp"
                 android:text="Suggested Artist Playlist"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView1" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView2"
                 android:layout_width="386dp"
                 android:layout_height="195dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="348dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/txtartistcolumn" />
 
             <TextView
                 android:id="@+id/txtgenrecolumn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="550dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="15dp"
                 android:lineSpacingExtra="30sp"
                 android:text="Recommended Genre For You"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="28sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView3"
                 android:layout_width="386dp"
                 android:layout_height="195dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="590dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="6dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/txtgenrecolumn" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

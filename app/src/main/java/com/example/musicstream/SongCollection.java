@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SongCollection {
-
     List<Song> songtrack = new ArrayList<Song>();
     Song songs[] = new Song[56];
     public SongCollection(){
@@ -45,7 +44,6 @@ public class SongCollection {
                 3.24,
                 R.drawable.twice_songcover_);
         //SongForYou
-
         Song ThirtyFourThirtyFive = new Song("image7",
                 "34 35",
                 "Ariana Grande",
@@ -76,7 +74,6 @@ public class SongCollection {
                 3.54,
                 R.drawable.arianagrande_sometimes);
         //ArianaGrande Songs
-
         Song Intro = new Song("image12",
                 "Intro",
                 "Migos",
@@ -103,7 +100,6 @@ public class SongCollection {
                 "https://cdn.discordapp.com/attachments/865599440189653062/871240108811092018/Migos_-_Supastars.mp3",
                 4.55,R.drawable.migos_superstars);
         //Migos Songs
-
         Song x = new Song("Image17",
                 "X",
                 "21 Savage",
@@ -130,7 +126,6 @@ public class SongCollection {
                 "https://cdn.discordapp.com/attachments/865599440189653062/871249541733683210/21_Savage_ft._Offset__Tyga_-_Tiffany.mp3",
                 4.09,R.drawable.twentyonesavage_tiffany);
         //21Savage Songs
-
         Song Life = new Song("image22",
                 "Life",
                 "Gucci Mane",
@@ -157,8 +152,6 @@ public class SongCollection {
                 "https://cdn.discordapp.com/attachments/865599440189653062/871258191097368626/Jackson_Wang_-_Different_Game_ft._Gucci_Mane.mp3",
                 3.08, R.drawable.gucci_mane_different_game);
         //GucciMane Songs
-
-
         Song Boombayah = new Song("image27",
                 "Boombayah",
                 "BlackPink",
@@ -185,8 +178,6 @@ public class SongCollection {
                 "https://cdn.discordapp.com/attachments/865599440189653062/871263208621613106/BLACKPINK__Dua_Lipa_-_Kiss_and_Make_Up.mp3",
                 3.08, R.drawable.blackpink_kiss_and_makeup);
         //Blackpink Songs
-
-
         Song TT = new Song("image32",
                 "TT",
                 "Twice",
@@ -213,7 +204,6 @@ public class SongCollection {
                 "https://cdn.discordapp.com/attachments/865599440189653062/871266836681981972/TwiceTwicetagram_-_YOU_IN_MY_HEART.mp3",
                 3.29, R.drawable.twice_you_in_my_heart);
         //Twice
-
         Song japanesesong1 =  new Song("Image37",
                 "Hikari to Kage no Hibi",
                 "AKB48",
@@ -245,7 +235,6 @@ public class SongCollection {
                 2.25, R.drawable.japanesesong
         );
         //Japanese Songs
-
         Song englishsong1 =  new Song("Image42",
                 "Cheap Thrills",
                 "Sia",
@@ -277,7 +266,6 @@ public class SongCollection {
                 3.43, R.drawable.english_song
         );
         //English Songs
-
         Song chinesesong1=  new Song("Image47",
                 "說散就散",
                 "JC",
@@ -309,7 +297,6 @@ public class SongCollection {
                 4.30, R.drawable.chinese_song
         );
         //Chinese Songs
-
         Song koreansong1 =  new Song("Image52",
                 "FAKE LOVE",
                 "BTS",
@@ -340,7 +327,7 @@ public class SongCollection {
                 "https://cdn.discordapp.com/attachments/865599440189653062/871596362968494100/BoA_-_Only_One.mp3",
                 3.38, R.drawable.korean_song
         );
-
+        //KoreanSongs
         songs[0] = NoTearsLeftToCry;
         songs[1] = CallCasting;
         songs[2] = BankAccount;
@@ -408,8 +395,6 @@ public class SongCollection {
         songs[54] = koreansong4;
         songs[55] = koreansong5;
         //Genre-KoreanSong
-
-
         songtrack.addAll(Arrays.asList(songs));
     }
 
@@ -449,4 +434,7 @@ public class SongCollection {
         return -1;
     }
 
+    public Song[] getSongs() {
+        return songs;
+    }
 }

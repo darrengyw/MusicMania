@@ -9,7 +9,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/songcovercardview"
+        android:id="@+id/searchcardview"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="35dp"
@@ -36,7 +36,7 @@
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="16dp"
-        app:layout_constraintStart_toEndOf="@+id/songcovercardview"
+        app:layout_constraintStart_toEndOf="@+id/searchcardview"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -48,7 +48,7 @@
         android:text="TextView"
         android:textColor="#FFFFFF"
         android:textSize="12dp"
-        app:layout_constraintStart_toEndOf="@+id/songcovercardview"
+        app:layout_constraintStart_toEndOf="@+id/searchcardview"
         app:layout_constraintTop_toBottomOf="@+id/genresongtitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

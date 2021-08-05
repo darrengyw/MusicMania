@@ -9,10 +9,10 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/songcovercardview"
+        android:id="@+id/searchcardview"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="75dp"
         app:cardCornerRadius="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,23 +35,25 @@
         android:id="@+id/artistname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:text="TextView"
         android:textColor="#FFFFFF"
         android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/artistsongrecycleview"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894" />
+        app:layout_constraintTop_toBottomOf="@+id/searchcardview" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/artistsongrecycleview"
         android:layout_width="410dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="424dp"
+        android:layout_height="410dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="384dp"
+        android:layout_marginEnd="5dp"
+        android:background="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

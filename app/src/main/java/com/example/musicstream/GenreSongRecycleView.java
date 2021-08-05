@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class GenreSongRecycleView extends RecyclerView.Adapter<GenreSongRecycleView.MyViewHolder>{
+
+    SongCollection songCollection = new SongCollection();
     List<GenreSong> genreSongList;
     Context context;
 
@@ -34,13 +36,18 @@ public class GenreSongRecycleView extends RecyclerView.Adapter<GenreSongRecycleV
 
     @Override
     public void onBindViewHolder(@NonNull GenreSongRecycleView.MyViewHolder genresongholder, int position) {
-        genresongholder.genreimage.setImageResource(genreSongList.get(position).getDrawable());
-        genresongholder.genresongtitle.setText(String.valueOf(genreSongList.get(position).getGenresongtitle()));
-        genresongholder.genretitle.setText(String.valueOf(genreSongList.get(position).getGenrename()));
+        String id = genreSongList.get(position).getSong().getId();
+        genresongholder.genreimage.setImageResource(genreSongList.get(position).getSong().getDrawable());
+        genresongholder.genresongtitle.setText(String.valueOf(genreSongList.get(position).getSong().getTitle()));
+        genresongholder.genretitle.setText(String.valueOf(genreSongList.get(position).getSong().getArtiste()));
         genresongholder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, genreSongList.get(position).getGenresongtitle(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, genreSongList.get(position).getSong().getTitle(), Toast.LENGTH_SHORT).show();
+                int index = songCollection.searchSongById(id);
+                Intent genresongpage = new Intent(context, PlaySongActivity.class);
+                genresongpage.putExtra("index", index);
+                context.startActivity(genresongpage);
             }
         });
     }

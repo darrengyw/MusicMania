@@ -8,7 +8,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/songcovercardview"
+        android:id="@+id/searchcardview"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_marginTop="80dp"
@@ -34,23 +34,25 @@
         android:id="@+id/genrename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
         android:textColor="#FFFFFF"
         android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/songcovercardview" />
+        app:layout_constraintTop_toBottomOf="@+id/searchcardview" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/genresongrecycleview"
         android:layout_width="410dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="25dp"
+        android:layout_height="410dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginEnd="5dp"
+        android:background="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genrename" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

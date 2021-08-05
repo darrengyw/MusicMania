@@ -56,12 +56,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/songcovercardview"
+        android:id="@+id/searchcardview"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
         app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -77,12 +77,13 @@
         android:id="@+id/txtSongtitle"
         android:layout_width="301dp"
         android:layout_height="66dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="364dp"
         android:text="Song Title"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

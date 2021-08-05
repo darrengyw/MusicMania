@@ -41,7 +41,6 @@ public class PlaySongActivity extends AppCompatActivity {
     Boolean repeatflag = false;
     Boolean shuffleflag = false;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

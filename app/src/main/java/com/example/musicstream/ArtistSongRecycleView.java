@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class ArtistSongRecycleView extends RecyclerView.Adapter<ArtistSongRecycleView.MyViewHolder>{
+    SongCollection songCollection = new SongCollection();
     List<ArtistSong> artistSongList;
     Context context;
 
@@ -34,19 +35,20 @@ public class ArtistSongRecycleView extends RecyclerView.Adapter<ArtistSongRecycl
 
     @Override
     public void onBindViewHolder(@NonNull ArtistSongRecycleView.MyViewHolder artistsongholder, int position) {
-        artistsongholder.artistimage.setImageResource((artistSongList.get(position).getDrawable()));
-        artistsongholder.songtitle.setText(String.valueOf(artistSongList.get(position).getArtistsongtitle()));
-        artistsongholder.artisttitle.setText(String.valueOf(artistSongList.get(position).getArtistname()));
+        String id = artistSongList.get(position).getSong().getId();
+        artistsongholder.artistimage.setImageResource((artistSongList.get(position).getSong().getDrawable()));
+        artistsongholder.songtitle.setText(String.valueOf(artistSongList.get(position).getSong().getTitle()));
+        artistsongholder.artisttitle.setText(String.valueOf(artistSongList.get(position).getSong().getArtiste()));
         artistsongholder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, artistSongList.get(position).getArtistsongtitle(), Toast.LENGTH_SHORT).show();
-                Intent artistpage = new Intent(context, PlaySongActivity.class);
-                artistpage.putExtra("index", position);
-                context.startActivity(artistpage);
+                Toast.makeText(context, artistSongList.get(position).getSong().getTitle(), Toast.LENGTH_SHORT).show();
+                int index = songCollection.searchSongById(id);
+                Intent artistsongpage = new Intent(context, PlaySongActivity.class);
+                artistsongpage.putExtra("index", index);
+                context.startActivity(artistsongpage);
             }
         });
-
 
     }
 
@@ -66,7 +68,7 @@ public class ArtistSongRecycleView extends RecyclerView.Adapter<ArtistSongRecycl
             artistimage = itemView.findViewById(R.id.artistimage);
             songtitle = itemView.findViewById(R.id.artistsongtitle);
             artisttitle = itemView.findViewById(R.id.artisttitle);
-            parentLayout = itemView.findViewById(R.id.genresongconstraint);
+            parentLayout = itemView.findViewById(R.id.artistsongconstraint);
         }
     }
 }

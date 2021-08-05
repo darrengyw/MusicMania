@@ -33,6 +33,7 @@ public class SongRecycleView extends RecyclerView.Adapter<SongRecycleView.MyView
     }
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder songholder, int position) {
+        String id = songList.get(position).getId();
         songholder.songname.setText(songList.get(position).getTitle());
         songholder.songcover.setImageResource(songList.get(position).getDrawable());
         songholder.parentLayout.setOnClickListener(new View.OnClickListener() {

@@ -3,6 +3,12 @@ package com.example.musicstream;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Context;
+import android.content.Intent;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.os.Bundle;
 
@@ -15,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager slayoutManager;
     SongCollection songCollection = new SongCollection();
     List<Song> songList = songCollection.getSongtrack();
-    GenreSongCollection genreSongCollection = new GenreSongCollection();
     //songcolumn recycleview variable
 
     private RecyclerView arecycleview;
@@ -33,10 +38,20 @@ public class MainActivity extends AppCompatActivity {
     //genrecolumn recycleview variable
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageView searchbutton = (ImageView) findViewById(R.id.btnSearch);
+        final Context context = this;
+        searchbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent searchpage = new Intent(context, SearchPageActivity.class);
+                startActivity(searchpage);
+            }
+        });
         srecyclerView = findViewById(R.id.recyclerView1);
         srecyclerView.setHasFixedSize(true);
         slayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
