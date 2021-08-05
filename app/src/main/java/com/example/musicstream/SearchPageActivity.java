@@ -17,9 +17,6 @@ public class SearchPageActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager searchlayoutManager;
     SongCollection songCollection = new SongCollection();
     List<Song> songList = songCollection.getSongtrack();
-    ImageView SearchArtistCover;
-    TextView SearchArtistName;
-    TextView SearchSongName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
