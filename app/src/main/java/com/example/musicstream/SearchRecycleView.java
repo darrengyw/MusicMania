@@ -34,7 +34,7 @@ public class SearchRecycleView extends RecyclerView.Adapter<SearchRecycleView.My
     }
     @Override
     public void onBindViewHolder(@NonNull SearchRecycleView.MyViewHolder searchholder, int position) {
-        String id = songList.get(position).getId();
+        //String id = songList.get(position).getId();
         searchholder.searchArtistimage.setImageResource(songList.get(position).getDrawable());
         searchholder.searchSongtitle.setText(String.valueOf(songList.get(position).getTitle()));
         searchholder.searchArtistname.setText(String.valueOf(songList.get(position).getArtiste()));
@@ -42,9 +42,10 @@ public class SearchRecycleView extends RecyclerView.Adapter<SearchRecycleView.My
             @Override
             public void onClick(View view) {
                 //Toast.makeText(context, songList.get(position).getTitle(), Toast.LENGTH_SHORT).show();
-                int index = songCollection.searchSongById(id);
+                //int index = songCollection.searchSongById(id);
                 Intent aftersearchsongpage = new Intent(context, PlaySongActivity.class);
-                aftersearchsongpage.putExtra("index", index);
+                //aftersearchsongpage.putExtra("index", index);
+                aftersearchsongpage.putExtra("index", position);
                 context.startActivity(aftersearchsongpage);
             }
         });

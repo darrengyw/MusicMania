@@ -21,14 +21,14 @@ public class SearchPageActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager searchlayoutManager;
     SongCollection songCollection = new SongCollection();
     List<Song> songList = songCollection.getSongtrack();
-    int searchartistsong;
+    //int displaysearchedartistsong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Bundle searchsong = this.getIntent().getExtras();
+        //displaysearchedartistsong = searchsong.getInt("index");
         setContentView(R.layout.activity_search_page);
-        Bundle searchsong = this.getIntent().getExtras();
-        searchartistsong = searchsong.getInt("index");
         EditText editText = findViewById(R.id.searchtext);
         editText.addTextChangedListener(new TextWatcher() {
             @Override
