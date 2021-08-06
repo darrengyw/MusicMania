@@ -4,13 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.media.Image;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +24,10 @@ public class SearchPageActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager searchlayoutManager;
     SongCollection songCollection = new SongCollection();
     List<Song> songList = songCollection.getSongtrack();
-    //int displaysearchedartistsong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Bundle searchsong = this.getIntent().getExtras();
-        //displaysearchedartistsong = searchsong.getInt("index");
         setContentView(R.layout.activity_search_page);
         EditText editText = findViewById(R.id.searchtext);
         editText.addTextChangedListener(new TextWatcher() {
@@ -65,7 +65,6 @@ public class SearchPageActivity extends AppCompatActivity {
             }
         }
         searchAdapter.searchedList(searchedList);
-
     }
 
 

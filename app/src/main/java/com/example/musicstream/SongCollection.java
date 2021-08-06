@@ -95,7 +95,7 @@ public class SongCollection {
                 "https://cdn.discordapp.com/attachments/865599440189653062/871240073830629376/Migos_-_Vaccine.mp3",
                 3.42,R.drawable.migos_vaccine);
         Song Supastars = new Song("image16",
-                " Supastars",
+                "Supastars",
                 "Migos",
                 "https://cdn.discordapp.com/attachments/865599440189653062/871240108811092018/Migos_-_Supastars.mp3",
                 4.55,R.drawable.migos_superstars);
@@ -184,7 +184,7 @@ public class SongCollection {
                 "https://cdn.discordapp.com/attachments/865599440189653062/871266567420268544/Twice-_TT.mp3",
                 3.34, R.drawable.twice_tt);
         Song GoodPerson = new Song("image33",
-                "GoodPerson",
+                "Good Person",
                 "Mina(Twice)",
                 "https://cdn.discordapp.com/attachments/865599440189653062/871266636680810517/Twice_Mina_-_Good_Person.mp3",
                 4.29, R.drawable.twice_mina_good_person);
@@ -223,7 +223,7 @@ public class SongCollection {
                 5.11, R.drawable.japanesesong
         );
         Song japanesesong4 =  new Song("Image40",
-                "Seifuku_no_Mannequin",
+                "Seifuku no Mannequin",
                 "AKB48",
                 "https://cdn.discordapp.com/attachments/865599440189653062/871596715424239676/Nogizaka46_-_Seifuku_no_Mannequin.mp3",
                 4.16, R.drawable.japanesesong
