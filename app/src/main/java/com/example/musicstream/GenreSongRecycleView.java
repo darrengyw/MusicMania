@@ -17,8 +17,9 @@ import java.util.List;
 
 public class GenreSongRecycleView extends RecyclerView.Adapter<GenreSongRecycleView.MyViewHolder>{
 
-    SongCollection songCollection = new SongCollection();
-    List<GenreSong> genreSongList;
+    //Reycleview for GenreSong
+    SongCollection songCollection = new SongCollection(); //Getting the SongArray from SongCollection
+    List<GenreSong> genreSongList; //Getting artistsong from SongCollection
     Context context;
 
     public GenreSongRecycleView(List<GenreSong> genreSongList, Context context)
@@ -30,6 +31,7 @@ public class GenreSongRecycleView extends RecyclerView.Adapter<GenreSongRecycleV
     @Override
     public GenreSongRecycleView.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.genre_songlayout,parent,false);
+        //Displaying the genre song array in the recycleview layout
         MyViewHolder genresongholder =  new MyViewHolder(view);
         return genresongholder;
     }
@@ -44,9 +46,9 @@ public class GenreSongRecycleView extends RecyclerView.Adapter<GenreSongRecycleV
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, genreSongList.get(position).getSong().getTitle(), Toast.LENGTH_SHORT).show();
-                int index = songCollection.searchSongById(id);
-                Intent genresongpage = new Intent(context, PlaySongActivity.class);
-                genresongpage.putExtra("index", index);
+                int index = songCollection.searchSongById(id); //search song based on ID
+                Intent genresongpage = new Intent(context, PlaySongActivity.class); //Go to PlaySong Page
+                genresongpage.putExtra("index", index); //Play Song according to the ID
                 context.startActivity(genresongpage);
             }
         });

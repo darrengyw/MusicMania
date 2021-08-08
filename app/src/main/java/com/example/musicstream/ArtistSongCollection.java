@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ArtistSongCollection {
     SongCollection songCollection = new SongCollection();
-    List<List> artistsong = new ArrayList<>();
+    List<List> artistsong = new ArrayList<>();                      //ArrayList for Artist Song
     List<ArtistSong> arianagrandesongs = new ArrayList<>();        //Ariana Grande Song
     List<ArtistSong> migossongs = new ArrayList<>();              //Migos Song
     List<ArtistSong> twentyonesavagesongs = new ArrayList<>();   //21 Savage Song
@@ -25,7 +25,7 @@ public class ArtistSongCollection {
         arianagrandesongs.add(GodIsAWoman);
         arianagrandesongs.add(Position);
         arianagrandesongs.add(Sometimes);
-        artistsong.add(arianagrandesongs);
+        artistsong.add(arianagrandesongs); //add artistsong array into list
         //Ariana Grande Song
         ArtistSong Intro = new ArtistSong(songCollection.songs[11]);
         ArtistSong TooBlessed = new ArtistSong(songCollection.songs[12]);
@@ -37,7 +37,7 @@ public class ArtistSongCollection {
         migossongs.add(WorkHard);
         migossongs.add(Vaccine);
         migossongs.add(Supastars);
-        artistsong.add(migossongs);
+        artistsong.add(migossongs); //add artistsong array into list
         //Migo Songs
         ArtistSong x = new ArtistSong(songCollection.songs[16]);
         ArtistSong GhostFaceKillers = new ArtistSong(songCollection.songs[17]);
@@ -49,7 +49,7 @@ public class ArtistSongCollection {
         twentyonesavagesongs.add(GucciOnMy);
         twentyonesavagesongs.add(SavageMode);
         twentyonesavagesongs.add(Tiffany);
-        artistsong.add(twentyonesavagesongs);
+        artistsong.add(twentyonesavagesongs); //add artistsong array into list
         //21Savage Songs
         ArtistSong Life = new ArtistSong(songCollection.songs[21]);
         ArtistSong SolcyBoyz3 = new ArtistSong(songCollection.songs[22]);
@@ -61,7 +61,7 @@ public class ArtistSongCollection {
         guccimanesongs.add(MetGala);
         guccimanesongs.add(SemiOnEm);
         guccimanesongs.add(DifferentGame);
-        artistsong.add(guccimanesongs);
+        artistsong.add(guccimanesongs); //add artistsong array into list
         //GucciMane Songs
         ArtistSong Boombayah = new ArtistSong(songCollection.songs[26]);
         ArtistSong Dududu = new ArtistSong(songCollection.songs[27]);
@@ -73,7 +73,7 @@ public class ArtistSongCollection {
         blackpinksongs.add(KillThisLove);
         blackpinksongs.add(PlayingWithFire);
         blackpinksongs.add(KillThisLove);
-        artistsong.add(blackpinksongs);
+        artistsong.add(blackpinksongs); //add artistsong array into list
         //Blackpink Songs
         ArtistSong TT = new ArtistSong(songCollection.songs[31]);
         ArtistSong GoodPerson = new ArtistSong(songCollection.songs[32]);
@@ -85,7 +85,7 @@ public class ArtistSongCollection {
         twicesongs.add(Fancy);
         twicesongs.add(FeelSpecial);
         twicesongs.add(YouInMyHeart);
-        artistsong.add(twicesongs);
+        artistsong.add(twicesongs); //add artistsong array into list
         //Twice Songs
     }
 

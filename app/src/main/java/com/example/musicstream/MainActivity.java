@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         searchbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent searchpage = new Intent(context, SearchPageActivity.class);
+                Intent searchpage = new Intent(context, SearchPageActivity.class); //Go to Search Page
                 startActivity(searchpage);
             }
         });

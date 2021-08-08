@@ -11,6 +11,7 @@ public class Genre {
         this.genretitle = genretitle;
         this.drawable = drawable;
     }
+    //Assign the variable into getter and setter
     public void setId(String id)
     {
         this.id = id;
@@ -23,7 +24,7 @@ public class Genre {
     {
         this.drawable = drawable;
     }
-
+    //This method sets the ID,Genre title and Drawable variable
     public String getId()
     {
         return  id;
@@ -36,4 +37,5 @@ public class Genre {
     {
         return drawable;
     }
+    //This method gets the ID,Genre title and Drawable variable
 }

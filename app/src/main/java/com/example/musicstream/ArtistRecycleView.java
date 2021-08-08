@@ -18,8 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 public class ArtistRecycleView extends RecyclerView.Adapter<ArtistRecycleView.MyViewHolder>
 {
-    List<Artist> artistList;
-    Context context;
+    //RecycleView for Artist
+    List<Artist> artistList; //Using the artist array to assign in RecycleView
+    Context context; //Assigning the artist array to display on ArtistSongActivity class page
 
     public ArtistRecycleView(List<Artist> artistList, Context context) {
         this.artistList = artistList;
@@ -29,18 +30,19 @@ public class ArtistRecycleView extends RecyclerView.Adapter<ArtistRecycleView.My
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.artist_layout,parent, false);
+        //Displaying the artist array in the recycleview layout
         MyViewHolder artistholder = new MyViewHolder(view);
         return artistholder;
     }
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder artistholder, int position) {
-        artistholder.artistname.setText(String.valueOf(artistList.get(position).getTitle()));
-        artistholder.artistcover.setImageResource(artistList.get(position).getDrawable());
+        artistholder.artistname.setText(String.valueOf(artistList.get(position).getTitle())); //textview for artistname
+        artistholder.artistcover.setImageResource(artistList.get(position).getDrawable());    //imageview for artist image
         artistholder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "Artist: " + artistList.get(position).getTitle(),Toast.LENGTH_SHORT).show();
-                Intent artistsongpage = new Intent(context, ArtistSongActivity.class);
+                Intent artistsongpage = new Intent(context, ArtistSongActivity.class); //Go to Artist Info Page
                 artistsongpage.putExtra("index", position);
                 context.startActivity(artistsongpage);
             }
@@ -49,7 +51,7 @@ public class ArtistRecycleView extends RecyclerView.Adapter<ArtistRecycleView.My
 
     @Override
     public int getItemCount() {
-        return artistList.size();
+        return artistList.size(); //List the array in the recycleview according to the size
     }
     public class MyViewHolder extends RecyclerView.ViewHolder
     {

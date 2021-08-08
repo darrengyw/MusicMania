@@ -22,6 +22,7 @@ public class SearchPageActivity extends AppCompatActivity {
     private RecyclerView searchrecycleview;
     private SearchRecycleView searchAdapter;
     private RecyclerView.LayoutManager searchlayoutManager;
+    //searchsongcolumn recycleview variable
     SongCollection songCollection = new SongCollection();
     List<Song> songList = songCollection.getSongtrack();
 
@@ -52,14 +53,15 @@ public class SearchPageActivity extends AppCompatActivity {
         searchrecycleview.setLayoutManager(searchlayoutManager);
         searchAdapter = new SearchRecycleView(songList,this);
         searchrecycleview.setAdapter(searchAdapter);
+        //searchcolumn recycleview
     }
 
     private void filter(String text)
     {
-        ArrayList<Song> searchedList = new ArrayList<>();
+        ArrayList<Song> searchedList = new ArrayList<>(); //Search song in the song array
         for(Song songitem: songList)
         {
-            if(songitem.getTitle().toLowerCase().contains(text.toLowerCase()))
+            if(songitem.getTitle().toLowerCase().contains(text.toLowerCase())) //match song name to display the right song
             {
                 searchedList.add(songitem);
             }

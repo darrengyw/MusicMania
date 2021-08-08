@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class SongRecycleView extends RecyclerView.Adapter<SongRecycleView.MyViewHolder> {
+    //Recycleview for Song
     List<Song> songList;
     Context context;
 
@@ -28,20 +29,20 @@ public class SongRecycleView extends RecyclerView.Adapter<SongRecycleView.MyView
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.song_layout,parent, false);
+        //Displaying the song array in the recycleview layout
         MyViewHolder songholder = new MyViewHolder((view));
         return songholder;
     }
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder songholder, int position) {
-        String id = songList.get(position).getId();
         songholder.songname.setText(songList.get(position).getTitle());
         songholder.songcover.setImageResource(songList.get(position).getDrawable());
         songholder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, songList.get(position).getTitle(), Toast.LENGTH_SHORT).show();
-                Intent songpage = new Intent(context, PlaySongActivity.class);
-                songpage.putExtra("index", position);
+                Intent songpage = new Intent(context, PlaySongActivity.class); //Go to PlaySong Page
+                songpage.putExtra("index", position); //Play Song according to the ID
                 context.startActivity(songpage);
             }
         });

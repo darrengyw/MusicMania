@@ -27,11 +27,11 @@ public class GenreSongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_genre_song);
         Bundle genresong = this.getIntent().getExtras();
-        displaygenre = genresong.getInt("index");
+        displaygenre = genresong.getInt("index");//passing information into the recycleview
         genreSongList = genreSongCollection.genresong.get(displaygenre);
+        //Display each genre's songs in the recycleview according to the genre image
         GenreCover = findViewById(R.id.genreview);
         GenreName = findViewById(R.id.genrename);
-
         grecycleview = findViewById(R.id.genresongrecycleview);
         grecycleview.setHasFixedSize(true);
         glayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false);
@@ -42,7 +42,7 @@ public class GenreSongActivity extends AppCompatActivity {
         displaygenreview();
 
     }
-    public void displaygenreview()
+    public void displaygenreview()//Displaying genre image and genre name in GenreSongActivity
     {
         GenreCover.setImageResource(genreCollection.getGenre().get(displaygenre).getDrawable());
         GenreName.setText((genreCollection.getGenre().get(displaygenre).getGenretitle()));

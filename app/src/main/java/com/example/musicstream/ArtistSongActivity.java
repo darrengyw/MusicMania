@@ -28,8 +28,9 @@ public class ArtistSongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artistsong);
         Bundle artistsong = this.getIntent().getExtras();
-        displayartist = artistsong.getInt("index");
+        displayartist = artistsong.getInt("index"); //passing information into the recycleview
         artistSongList = artistSongCollection.artistsong.get(displayartist);
+        //Display each artist's songs in the recycleview according to the artist image
         ArtistCover = findViewById(R.id.artistview);
         ArtistName = findViewById(R.id.artistname);
         asrecycleview = findViewById(R.id.artistsongrecycleview);
@@ -39,11 +40,11 @@ public class ArtistSongActivity extends AppCompatActivity {
         asAdapter = new ArtistSongRecycleView(artistSongList ,this);
         asrecycleview.setAdapter(asAdapter);
         //artistsongcolumn recycleview
-        displayartistimage();
+        displayartistimage();//Method show below
 
     }
 
-    public void displayartistimage()
+    public void displayartistimage()//Displaying artist image and artist name in ArtistSongActivity
     {
         ArtistCover.setImageResource(artistCollection.getArtist().get(displayartist).getDrawable());
         ArtistName.setText((artistCollection.getArtist().get(displayartist).getTitle()));

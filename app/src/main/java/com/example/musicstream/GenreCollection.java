@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class GenreCollection {
-    List<Genre> genre = new ArrayList<Genre>();
-    private Genre genres[] = new Genre[4];
+    List<Genre> genre = new ArrayList<Genre>(); //ArrayList for Genre
+    private Genre genres[] = new Genre[4];  //Artist Array Index Size: 4
 
     public GenreCollection()
     {
@@ -28,10 +28,10 @@ public class GenreCollection {
         genres[2] = chinesesong;
         genres[3] = koreansong;
 
-        genre.addAll(Arrays.asList(genres));
+        genre.addAll(Arrays.asList(genres)); //add genre array into list
     }
     public List<Genre> getGenre()
     {
-        return genre;
+        return genre;//return all the genre's index
     }
 }

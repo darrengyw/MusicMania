@@ -55,7 +55,7 @@ public class PlaySongActivity extends AppCompatActivity {
         FromTime = findViewById(R.id.fromtime);
         ToTime = findViewById(R.id.totime);
         seekBar = findViewById(R.id.seekBar);
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() { //for seekbar
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 //the song will play when left off
@@ -76,7 +76,7 @@ public class PlaySongActivity extends AppCompatActivity {
      Runnable playablebar = new Runnable() {
          @Override
          public void run() {
-             if(player != null && player.isPlaying())
+             if(player != null && player.isPlaying()) //play according to the song's duration length
              {
                  seekBar.setProgress(player.getCurrentPosition());
                  String fromtime = createtimer((player.getCurrentPosition()));
@@ -155,10 +155,10 @@ public class PlaySongActivity extends AppCompatActivity {
     {
         if(repeatflag)
         {
-            repeatbutton.setImageResource(R.drawable.repeat__off_);
+            repeatbutton.setImageResource(R.drawable.repeat__off_); //play song once the repeat button is toggle off
         }else
         {
-            repeatbutton.setImageResource(R.drawable.repeat__on_);
+            repeatbutton.setImageResource(R.drawable.repeat__on_); //repeat song once the repeat button is toggle on
         }
         repeatflag = !repeatflag;
     }
@@ -167,13 +167,13 @@ public class PlaySongActivity extends AppCompatActivity {
     {
         if(shuffleflag)
         {
-            shufflebutton.setImageResource(R.drawable.shuffle__off_);
+            shufflebutton.setImageResource(R.drawable.shuffle__off_);//shuffle song once the shuffle button is toggle off
             songCollection = new SongCollection();
         }else
         {
-            shufflebutton.setImageResource(R.drawable.shuffle_on_);
-            Collections.shuffle(shuffleList);
-            shuffleList.toArray(songCollection.songs);
+            shufflebutton.setImageResource(R.drawable.shuffle_on_); //shuffle song once the shuffle button is toggle on
+            Collections.shuffle(shuffleList); //collect songs to shuffle
+            shuffleList.toArray(songCollection.songs); //shuffle songs on what is in the array
         }
         shuffleflag = !shuffleflag;
     }
@@ -190,15 +190,16 @@ public class PlaySongActivity extends AppCompatActivity {
                 else
                 {
                     btnPlayPause.setImageResource(R.drawable.pause);
+                    playNext(null); //play next song
                 }
             }
         });
     }
-    public void playNext(View view){
+    public void playNext(View view){ //play next song
         currentIndex = songCollection.getNextSong(currentIndex);
         displaySongBasedOnIndex(currentIndex);
         playSong(filelink);
-    }public void playPrevious(View view){
+    }public void playPrevious(View view){ //play prev song
         currentIndex = songCollection.getPrevSong(currentIndex);
         displaySongBasedOnIndex(currentIndex);
         playSong(filelink);

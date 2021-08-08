@@ -17,8 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchRecycleView extends RecyclerView.Adapter<SearchRecycleView.MyViewHolder> {
-    SongCollection songCollection = new SongCollection();
-    List<Song> songList;
+    //Recycleview for Search
+    SongCollection songCollection = new SongCollection(); //Getting the SongArray from SongCollection
+    List<Song> songList; //Getting song from SongCollection
     Context context;
     public SearchRecycleView(List<Song> songList, Context context)
     {
@@ -29,6 +30,7 @@ public class SearchRecycleView extends RecyclerView.Adapter<SearchRecycleView.My
     @Override
     public SearchRecycleView.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.search_recycleviewlayout,parent,false);
+        //Displaying the search song array in the recycleview layout
         MyViewHolder searchholder =  new MyViewHolder(view);
         return searchholder;
     }
@@ -41,9 +43,9 @@ public class SearchRecycleView extends RecyclerView.Adapter<SearchRecycleView.My
         searchholder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int index = songCollection.searchSongById(id);
-                Intent aftersearchsongpage = new Intent(context, PlaySongActivity.class);
-                aftersearchsongpage.putExtra("index", index);
+                int index = songCollection.searchSongById(id); //search song based on ID
+                Intent aftersearchsongpage = new Intent(context, PlaySongActivity.class); //Go to PlaySong Page
+                aftersearchsongpage.putExtra("index", index); //Play Song according to the ID
                 context.startActivity(aftersearchsongpage);
 
             }

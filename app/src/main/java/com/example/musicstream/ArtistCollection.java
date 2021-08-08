@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ArtistCollection {
-    List<Artist> artisttrack = new ArrayList<Artist>();
-    private Artist artists[] = new Artist[6];
+    List<Artist> artisttrack = new ArrayList<Artist>(); //ArrayList for Artist
+    private Artist artists[] = new Artist[6];      //Artist Array Index Size: 6
 
     public ArtistCollection()
     {
@@ -36,10 +36,10 @@ public class ArtistCollection {
         artists[4] = blackpink;
         artists[5] = twice;
 
-        artisttrack.addAll(Arrays.asList(artists));
+        artisttrack.addAll(Arrays.asList(artists)); //add artist array into list
     }
     public List<Artist> getArtist() {
-        return artisttrack;
+        return artisttrack; //return all the artist's index
 
     }
 

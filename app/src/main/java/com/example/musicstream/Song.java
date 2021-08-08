@@ -16,12 +16,14 @@ public class Song {
         this.songLength = songLength;
         this.drawable = drawable;
     }
+    //Assign the variable into getter and setter
     public void setId(String id){this.id = id;}
     public void setTitle(String title){this.title = title;}
     public void setArtiste(String artiste){this.artiste = artiste;}
     public void setFileLink(String fileLink){this.fileLink = fileLink;}
     public void setSongLength(double songLength) {this.songLength = songLength;}
     public void setDrawable(int drawable){this.drawable = drawable;}
+    //This method sets the ID,Title and Drawable variable
 
     public String getId(){return id;}
     public String getTitle(){return title;}
@@ -29,5 +31,5 @@ public class Song {
     public String getFileLink(){return fileLink;}
     public double getSongLength(){return songLength;}
     public int getDrawable(){return drawable;}
-
+    //This method sets the ID,Title and Drawable variable
 }

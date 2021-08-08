@@ -17,8 +17,9 @@ import java.util.List;
 
 public class GenreRecycleView extends RecyclerView.Adapter<GenreRecycleView.MyViewHolder>
 {
-    List<Genre> genreList;
-    Context context;
+    //RecycleView for Genre
+    List<Genre> genreList; //Using the genre array to assign in RecycleView
+    Context context; //Assigning the genre array to display on GenreSongActivity class page
     public GenreRecycleView(List<Genre> genreList, Context context)
     {
         this.genreList = genreList;
@@ -41,7 +42,7 @@ public class GenreRecycleView extends RecyclerView.Adapter<GenreRecycleView.MyVi
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "Genre: " + genreList.get(position).getGenretitle(),Toast.LENGTH_SHORT).show();
-                Intent genresongpage = new Intent(context, GenreSongActivity.class);
+                Intent genresongpage = new Intent(context, GenreSongActivity.class);//Go to Genre Info Page
                 genresongpage.putExtra("index", position);
                 context.startActivity(genresongpage);
             }

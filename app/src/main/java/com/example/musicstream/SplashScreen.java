@@ -11,14 +11,14 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        splashbg.start();
+        splashbg.start(); //startup splash screen
     }
 
     Thread splashbg = new Thread() {
         public void run() {
             try {
-                sleep(2000);
-                Intent intent = new Intent(getBaseContext(),MainActivity.class);
+                sleep(2000); //load for 2seconds
+                Intent intent = new Intent(getBaseContext(),MainActivity.class); //Change to MainActivity
                 startActivity(intent);
                 finish();
             } catch (Exception e) {

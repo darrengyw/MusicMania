@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SongCollection {
-    List<Song> songtrack = new ArrayList<Song>();
-    Song songs[] = new Song[56];
+    List<Song> songtrack = new ArrayList<Song>(); //ArrayList for Artist Song
+    Song songs[] = new Song[56];               //Song Array Index Size: 56
     public SongCollection(){
 
         Song NoTearsLeftToCry = new Song("image1",
@@ -395,7 +395,7 @@ public class SongCollection {
         songs[54] = koreansong4;
         songs[55] = koreansong5;
         //Genre-KoreanSong
-        songtrack.addAll(Arrays.asList(songs));
+        songtrack.addAll(Arrays.asList(songs)); //add song array into list
     }
 
     public List<Song> getSongtrack()

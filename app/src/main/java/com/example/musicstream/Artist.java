@@ -11,18 +11,21 @@ public class Artist {
         this.title = title;
         this.drawable = drawable;
     }
+    //Assign the variable into getter and setter
     public void setId(String id)
     {
         this.id = id;
     }
     public void setTitle(String title)
     {
+
         this.title = title;
     }
     public void setDrawable(int drawable)
     {
         this.drawable = drawable;
     }
+    //This method sets the ID,Title and Drawable variable
 
     public String getId()
     {
@@ -36,4 +39,5 @@ public class Artist {
     {
         return drawable;
     }
+    //This method sets the ID,Title and Drawable variable
 }

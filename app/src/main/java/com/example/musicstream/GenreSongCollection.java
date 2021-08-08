@@ -5,7 +5,7 @@ import java.util.List;
 
 public class GenreSongCollection {
     SongCollection songCollection = new SongCollection();
-    List<List> genresong = new ArrayList<>();
+    List<List> genresong = new ArrayList<>();                   //ArrayList for Genre Song
     List<GenreSong> japanesesongs = new ArrayList<>();          //Japanese Song
     List<GenreSong> englishsongs = new ArrayList<>();          //English Song
     List<GenreSong> chinesesongs = new ArrayList<>();           //Chinese Song
@@ -22,7 +22,7 @@ public class GenreSongCollection {
         japanesesongs.add(japanesesong3);
         japanesesongs.add(japanesesong4);
         japanesesongs.add(japanesesong5);
-        genresong.add(japanesesongs);
+        genresong.add(japanesesongs); //add genresong array into list
         //Japanese Songs
         GenreSong englishsong1 = new GenreSong(songCollection.songs[41]);
         GenreSong englishsong2 = new GenreSong(songCollection.songs[42]);
@@ -34,7 +34,7 @@ public class GenreSongCollection {
         englishsongs.add(englishsong3);
         englishsongs.add(englishsong4);
         englishsongs.add(englishsong5);
-        genresong.add(englishsongs);
+        genresong.add(englishsongs); //add genresong array into list
         //English Songs
         GenreSong chinesesong1 = new GenreSong(songCollection.songs[46]);
         GenreSong chinesesong2 = new GenreSong(songCollection.songs[47]);
@@ -46,7 +46,7 @@ public class GenreSongCollection {
         chinesesongs.add(chinesesong3);
         chinesesongs.add(chinesesong4);
         chinesesongs.add(chinesesong5);
-        genresong.add((chinesesongs));
+        genresong.add((chinesesongs)); //add genresong array into list
         //Chinese Songs
         GenreSong koreansong1 = new GenreSong(songCollection.songs[51]);
         GenreSong koreansong2 = new GenreSong(songCollection.songs[52]);
@@ -58,7 +58,7 @@ public class GenreSongCollection {
         koreansongs.add(koreansong3);
         koreansongs.add(koreansong4);
         koreansongs.add(koreansong5);
-        genresong.add(koreansongs);
+        genresong.add(koreansongs); //add genresong array into list
         //Korean Songs
 
     }
