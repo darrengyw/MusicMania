@@ -267,7 +267,7 @@ public class SongCollection {
         );
         //English Songs
         Song chinesesong1=  new Song("Image47",
-                "說散就散",
+                "说散就散",
                 "JC",
                 "https://cdn.discordapp.com/attachments/865599440189653062/871595763518562384/JC_-_.mp3",
                 4.02, R.drawable.chinese_song
@@ -285,13 +285,13 @@ public class SongCollection {
                 5.03, R.drawable.chinese_song
         );
         Song chinesesong4=  new Song("Image50",
-                "艾辰 「往後餘生 風雪是你 平淡是你 清貧也是你」",
+                "艾辰 「往后余生 风雪是你 平淡是你 清贫也是你」",
                 "艾辰",
                 "https://cdn.discordapp.com/attachments/865599440189653062/871595796468998144/-_MEIYOU_.mp3",
                 6.07, R.drawable.chinese_song
         );
         Song chinesesong5=  new Song("Image51",
-                "綠色",
+                "绿色",
                 "陳雪凝",
                 "https://cdn.discordapp.com/attachments/865599440189653062/871595813107793940/-_.mp3",
                 4.30, R.drawable.chinese_song
