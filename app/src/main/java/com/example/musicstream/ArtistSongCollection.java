@@ -72,7 +72,7 @@ public class ArtistSongCollection {
         blackpinksongs.add(Dududu);
         blackpinksongs.add(KillThisLove);
         blackpinksongs.add(PlayingWithFire);
-        blackpinksongs.add(KillThisLove);
+        blackpinksongs.add(KissAndMakeup);
         artistsong.add(blackpinksongs); //add artistsong array into list
         //Blackpink Songs
         ArtistSong TT = new ArtistSong(songCollection.songs[31]);
